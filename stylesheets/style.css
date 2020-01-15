@@ -1,0 +1,646 @@
+* {
+  transition: all 0.5s ease-in-out; }
+
+html, body {
+  font-family: "Arial", Helvetica, sans-serif;
+  background-color: #fffdf6;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: hidden; }
+
+div {
+  background-color: #fffdf6;
+  color: #310a04;
+  width: 100%; }
+
+h1 {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 13vw;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 0.8em;
+  letter-spacing: -0.5vw;
+  color: #310a04;
+  transition: all 0.5s ease-in-out; }
+
+h2 {
+  font: 14px "Arial", Helvetica, sans-serif;
+  font-size: 70px;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -2px;
+  color: #310a04; }
+
+h6, a {
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 1.8vw;
+  transform: scale(1, 1.2);
+  color: #310a04;
+  font-weight: 100;
+  display: block; }
+
+span {
+  display: block;
+  font-size: 1vw;
+  color: #310a04; }
+
+hr {
+  color: #310a04;
+  border: 1px solid #310a04; }
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.red {
+  background-color: red; }
+
+h1, h2, h6, a, img, .navigate span, .content span, hr {
+  opacity: 0;
+  margin-top: 3vw; }
+
+a {
+  cursor: pointer;
+  color: #310a04;
+  text-transform: capitalize; }
+  a:hover {
+    color: #310a04;
+    text-decoration: none; }
+
+.fadeIn {
+  opacity: 1 !important;
+  transition: all ease-in-out 0.8s;
+  animation: fadeIn 0.8s;
+  margin-top: 0 !important; }
+
+@keyframes fadeIn {
+  0% {
+    margin-top: 3vw; }
+  100% {
+    margin-top: 0; } }
+.fadeOut {
+  opacity: 0 !important;
+  transition: all ease-in-out 0.8s;
+  animation: fadeOut 0.8s;
+  margin-top: 0 !important; }
+
+.bottom {
+  position: absolute;
+  z-index: 5;
+  background: #310a04;
+  transition: all 0.2s ease-in-out;
+  width: 0%;
+  height: 0.1vw;
+  bottom: 48%;
+  left: 0; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #fffdf6; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 10px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background-color: #310a04; }
+
+noscript div {
+  padding: 3vw 2vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  background: white;
+  color: black; }
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fffdf6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100; }
+  .loader-wrapper .loader {
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    top: 45%;
+    border: 0.2vw solid #310a04;
+    animation: loader 2s infinite ease; }
+    .loader-wrapper .loader .loader-inner {
+      vertical-align: top;
+      width: 100%;
+      height: 10%;
+      position: absolute;
+      top: -1vw;
+      background-color: #310a04;
+      animation: loader-inner 2s infinite ease-in; }
+@keyframes loader {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(180deg); }
+  50% {
+    transform: rotate(180deg); }
+  75% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes loader-inner {
+  0% {
+    height: 2%;
+    transform: rotate(-180deg); }
+  25% {
+    height: 2%;
+    transform: rotate(360deg); }
+  50% {
+    height: 5%;
+    transform: rotate(180deg); }
+  75% {
+    height: 5%;
+    transform: rotate(0deg); }
+  100% {
+    height: 2%;
+    transform: rotate(-180deg); } }
+.navigate {
+  padding-left: 4vw;
+  position: relative; }
+  .navigate .brand,
+  .navigate .career,
+  .navigate .nav-list {
+    position: fixed;
+    width: 25vw;
+    height: 30vw;
+    top: 35vw;
+    left: 4vw;
+    background-color: transparent; }
+  .navigate .brand {
+    top: 5vw; }
+  .navigate .career {
+    top: 20vw; }
+  .navigate .nav-list {
+    position: fixed; }
+    .navigate .nav-list a {
+      font-size: 1vw;
+      transition: all 1s ease-in-out;
+      position: relative; }
+      .navigate .nav-list a:hover {
+        font-size: 1.4vw;
+        margin: 1vw 0;
+        font-weight: 600; }
+    .navigate .nav-list .active {
+      padding: 3vw 0;
+      font-size: 1.5vw;
+      font-weight: 600; }
+
+.content {
+  position: relative;
+  background: #fffdf6;
+  /* ------------------------------- End Large nad Medium screen style --------------------------------------- */ }
+  .content .svg {
+    width: 50vw;
+    height: 50vw;
+    position: absolute;
+    top: 0;
+    left: -25vw;
+    background: transparent; }
+    .content .svg svg {
+      width: 100%;
+      height: 100%; }
+  .content .home {
+    padding-top: 2.5vw; }
+    .content .home h1:nth-of-type(2) {
+      padding-left: 28vw; }
+    .content .home h1:nth-of-type(3) {
+      margin-bottom: 2vw; }
+    .content .home h1:nth-of-type(4) {
+      margin-bottom: 15vw; }
+    .content .home img {
+      max-width: 40vw;
+      margin: 10vw 0 0 27vw;
+      filter: shadow(0.9);
+      margin-top: 5vw; }
+  .content .about {
+    line-height: 1em;
+    padding-bottom: 25vw; }
+    .content .about .row .col-3 {
+      padding-top: 1.3vw; }
+      .content .about .row .col-3 span:nth-of-type(1), .content .about .row .col-3 span:nth-of-type(2) {
+        font-size: 0.8vw;
+        text-transform: uppercase;
+        font-weight: 200;
+        margin: 0;
+        padding: 0; }
+    .content .about .col-9 b, .content .about .col-9 p {
+      margin-left: 8.8vw;
+      line-height: 1.2em; }
+    .content .about .col-9 b {
+      font-size: 3vw;
+      display: inline-block;
+      margin-left: 7.8vw; }
+    .content .about .col-9 p {
+      display: inline-block;
+      margin: 0;
+      font-size: 3vw; }
+    .content .about span {
+      font-family: "Roboto Condensed", Helvetica, sans-serif;
+      letter-spacing: -1px;
+      font-size: 2.8vw;
+      line-height: 1em; }
+  .content .work .project {
+    border-top: 0.1vw solid #310a04;
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    padding: 1.5vw 0 0 0;
+    margin-top: 1.5vw; }
+    .content .work .project .name,
+    .content .work .project .img,
+    .content .work .project .date {
+      display: inline-block;
+      float: left;
+      text-transform: uppercase; }
+    .content .work .project .name {
+      width: 46.6vw;
+      vertical-align: middle; }
+      .content .work .project .name h2 {
+        font-size: 4vw;
+        position: relative; }
+        .content .work .project .name h2:nth-last-of-type(1) {
+          width: 50%; }
+        .content .work .project .name h2:nth-last-of-type(2) {
+          width: 35%; }
+    .content .work .project .img {
+      width: 13.3vw;
+      margin-top: 1.5vw; }
+      .content .work .project .img a {
+        margin-bottom: 1.5vw; }
+    .content .work .project .date {
+      width: 6.5vw;
+      line-height: 1.2em; }
+      .content .work .project .date span {
+        margin-left: 2vw;
+        width: 120%;
+        padding: 1.7vw 0 0 0; }
+        .content .work .project .date span:nth-of-type(2) {
+          margin-left: 3.8vw; }
+    .content .work .project img {
+      height: 4vw;
+      margin: 0.5vw 4vw;
+      padding-top: 0.5vw; }
+    .content .work .project span {
+      font-size: 2vw;
+      letter-spacing: -1px; }
+    .content .work .project:nth-of-type(1) .name {
+      margin-top: 2vw !important; }
+    .content .work .project:nth-of-type(1) img {
+      height: 4.5vw;
+      margin: 3vw; }
+  .content .skills {
+    margin-top: 25vw; }
+    .content .skills span {
+      text-transform: uppercase;
+      transition: all 0.2s ease-in-out;
+      position: absolute;
+      color: #310a04; }
+    .content .skills .skills-cloud {
+      position: relative;
+      width: 65vw;
+      height: 65vw;
+      margin-top: 13vw; }
+      .content .skills .skills-cloud .html {
+        font-size: 5vw;
+        top: 27%;
+        left: 62%; }
+      .content .skills .skills-cloud .css {
+        font-size: 2vw;
+        top: 58%;
+        left: 58%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .javascript {
+        font-size: 5.5vw;
+        top: 46%;
+        left: 23%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .bootstrap {
+        font-size: 3.2vw;
+        top: 63%;
+        left: 52%; }
+      .content .skills .skills-cloud .sass {
+        font-size: 1.65vw;
+        top: 54%;
+        left: 52.7%; }
+      .content .skills .skills-cloud .ajax {
+        font-size: 1.6vw;
+        top: 40%;
+        left: 63%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .angular {
+        font-size: 2vw;
+        top: 54%;
+        left: 30%; }
+      .content .skills .skills-cloud .jquery {
+        font-size: 2.05vw;
+        top: 40%;
+        left: 46.9%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .php {
+        font-size: 4.9vw;
+        top: 64%;
+        left: 14%; }
+      .content .skills .skills-cloud .svg {
+        font-size: 1.8vw;
+        top: 45%;
+        left: 68%; }
+      .content .skills .skills-cloud .nodejs {
+        font-size: 1.5vw;
+        top: 51%;
+        left: 35%; }
+      .content .skills .skills-cloud .express {
+        font-size: 3.2vw;
+        top: 39%;
+        left: 12%; }
+      .content .skills .skills-cloud .mongodb {
+        font-size: 2vw;
+        top: 64%;
+        left: 35.3%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .mysql {
+        font-size: 3.5vw;
+        top: 51.5%;
+        left: 12%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .gulp {
+        font-size: 1.51vw;
+        top: 63%;
+        left: 29%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .git {
+        font-size: 1.5vw;
+        top: 47%;
+        left: 24%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .vue {
+        font-size: 2.8vw;
+        top: 48%;
+        left: 53%; }
+      .content .skills .skills-cloud .pug {
+        font-size: 2.8vw;
+        top: 48%;
+        left: 64%; }
+      .content .skills .skills-cloud .laravel {
+        font-size: 2.5vw;
+        top: 47%;
+        left: 68%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .seo {
+        font-size: 1.5vw;
+        top: 47%;
+        left: 32%;
+        transform: rotate(-90deg); }
+      .content .skills .skills-cloud .webpack {
+        font-size: 1.5vw;
+        top: 58.7%;
+        left: 24.5%; }
+  .content .contact {
+    padding-bottom: 8vw; }
+    .content .contact h1 {
+      transform: scale(0.98, 1); }
+    .content .contact .email,
+    .content .contact .mobile {
+      margin: 8vw 0;
+      font-size: 3.5vw; }
+    .content .contact .mobile {
+      font-size: 2.7vw;
+      font-family: "Verdana", Geneva, sans-serif; }
+    .content .contact h3 {
+      font-size: 2.2vw;
+      font-family: "Roboto Condensed", Helvetica, sans-serif;
+      font-weight: bold;
+      margin: 0; }
+    .content .contact span {
+      font-size: 1.7vw;
+      font-family: "Roboto Condensed", Helvetica, sans-serif; }
+
+@media (max-width: 575.98px) {
+  h1 {
+    font-size: 15vw;
+    transform: scale(1, 1.3);
+    line-height: 16vw; }
+
+  .loader-wrapper .loader {
+    width: 7vw !important;
+    height: 7vw !important; }
+
+  .navigate {
+    padding: 5vw 0 50vw 13vw; }
+    .navigate .brand, .navigate .career {
+      margin: 0 0 1.5vw 0;
+      transform: scale(1.1, 1.1); }
+    .navigate .nav-list {
+      display: none; }
+    .navigate .brand {
+      font-weight: 600;
+      font-size: 4vw;
+      transform: scale(1.1, 1.6);
+      top: 14vw !important; }
+    .navigate .career {
+      font-size: 4vw;
+      line-height: 25%; }
+
+  .content .home {
+    padding: 5vw 0 0 5vw !important; }
+    .content .home img {
+      max-width: 80vw !important;
+      margin: 5vw 0 0 0 !important; }
+  .content .about {
+    line-height: 1em;
+    padding: 5vw; }
+    .content .about .row {
+      margin-top: 5vw; }
+      .content .about .row .col-3 {
+        padding: 1.3vw 0;
+        line-height: 1.5em; }
+        .content .about .row .col-3 span:nth-of-type(1), .content .about .row .col-3 span:nth-of-type(2) {
+          font-size: 3vw !important;
+          text-transform: uppercase;
+          font-weight: 200;
+          margin: 0;
+          padding: 0; }
+        .content .about .row .col-3 b {
+          display: none; }
+    .content .about .col-9 {
+      line-height: 1.2em;
+      font-size: 5vw !important;
+      padding: 6vw 0 0; }
+      .content .about .col-9 b, .content .about .col-9 p {
+        line-height: 6vw; }
+      .content .about .col-9 b {
+        display: inline-block;
+        float: left;
+        transform: scale(1, 1.5); }
+      .content .about .col-9 p {
+        margin: 0;
+        font-size: 5vw;
+        display: inline-block;
+        padding-left: 2vw;
+        vertical-align: top; }
+    .content .about span {
+      font-family: "Roboto Condensed", Helvetica, sans-serif;
+      letter-spacing: -1px;
+      font-size: 5vw !important;
+      line-height: 1em;
+      display: inline !important; }
+  .content .work {
+    padding: 5vw; }
+    .content .work .project {
+      border-top: 0.3vw solid #310a04;
+      font-family: "Roboto Condensed", Helvetica, sans-serif;
+      padding: 3.5vw 0 0 0;
+      margin-top: 1.5vw; }
+      .content .work .project .name {
+        display: inline-block;
+        float: left;
+        text-transform: uppercase; }
+      .content .work .project .name {
+        width: 50vw; }
+        .content .work .project .name h2 {
+          font-size: 8vw; }
+      .content .work .project .img {
+        width: 27vw;
+        height: 22vw;
+        display: block;
+        margin-top: 1.8vw; }
+        .content .work .project .img a {
+          width: 20vw;
+          height: 20vw; }
+        .content .work .project .img img {
+          min-width: 100%;
+          min-height: 100%; }
+      .content .work .project .date {
+        width: 100%;
+        line-height: 1.2em;
+        display: block !important;
+        text-transform: uppercase;
+        margin-bottom: 3vw; }
+        .content .work .project .date span {
+          margin: 0 0 2vw 9vw !important;
+          width: 100%;
+          padding: 0;
+          font-size: 3vw;
+          transform: scale(1.2, 1); }
+      .content .work .project img {
+        max-width: 13.5vw;
+        height: 17vw; }
+      .content .work .project span {
+        font-size: 2vw;
+        letter-spacing: -1px; }
+  .content .skills {
+    padding: 5vw; }
+    .content .skills .skills-cloud {
+      width: 85vw;
+      height: 110vw;
+      margin: 0; }
+      .content .skills .skills-cloud .html {
+        font-size: 6vw;
+        top: 30%;
+        left: 69%; }
+      .content .skills .skills-cloud .css {
+        font-size: 3vw;
+        top: 61%;
+        left: 60%; }
+      .content .skills .skills-cloud .javascript {
+        font-size: 9.5vw;
+        top: 46%;
+        left: 16%; }
+      .content .skills .skills-cloud .bootstrap {
+        font-size: 5.2vw;
+        top: 67%;
+        left: 54%; }
+      .content .skills .skills-cloud .sass {
+        font-size: 2.65vw;
+        top: 56%;
+        left: 54.7%; }
+      .content .skills .skills-cloud .ajax {
+        font-size: 3.3vw;
+        top: 42%;
+        left: 67%; }
+      .content .skills .skills-cloud .angular {
+        font-size: 3vw;
+        top: 58%;
+        left: 27%; }
+      .content .skills .skills-cloud .jquery {
+        font-size: 4.05vw;
+        top: 40%;
+        left: 46.9%; }
+      .content .skills .skills-cloud .php {
+        font-size: 6.9vw;
+        top: 70%;
+        left: 11%; }
+      .content .skills .skills-cloud .nodejs {
+        font-size: 2.5vw;
+        top: 55%;
+        left: 32%; }
+      .content .skills .skills-cloud .express {
+        font-size: 4.3vw;
+        top: 43%;
+        left: 9%; }
+      .content .skills .skills-cloud .mongodb {
+        font-size: 3.2vw;
+        top: 68%;
+        left: 33.3%; }
+      .content .skills .skills-cloud .mysql {
+        font-size: 5.5vw;
+        top: 56.5%;
+        left: 8%; }
+      .content .skills .skills-cloud .gulp {
+        font-size: 2.51vw;
+        top: 67%;
+        left: 25%; }
+      .content .skills .skills-cloud .git {
+        font-size: 2.5vw;
+        top: 51%;
+        left: 22%; }
+      .content .skills .skills-cloud .vue {
+        font-size: 3.8vw;
+        top: 51%;
+        left: 56%; }
+      .content .skills .skills-cloud .pug {
+        font-size: 3.8vw;
+        top: 51%;
+        left: 68%; }
+      .content .skills .skills-cloud .laravel {
+        font-size: 4.3vw;
+        top: 48%;
+        left: 70%; }
+      .content .skills .skills-cloud .seo {
+        font-size: 2.5vw;
+        top: 50%;
+        left: 28%; }
+      .content .skills .skills-cloud .webpack {
+        font-size: 2.2vw;
+        top: 61.7%;
+        left: 22.5%; }
+  .content .contact {
+    height: 70vw;
+    padding: 5vw; }
+    .content .contact .offset-2 {
+      margin-left: 5vw !important; }
+      .content .contact .offset-2 span {
+        font-size: 4.5vw; }
+
+  /* ------------------------------- End small screen style--------------------------------------- */ }
+
+/*# sourceMappingURL=style.css.map */

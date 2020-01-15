@@ -1,0 +1,1237 @@
+// sass --watch F:\Virtuoso\WebDevelopment\abdohatem\v.0.1\src\projects\simone\stylesheets\style.sass:F:\Virtuoso\WebDevelopment\abdohatem\v.0.1\src\projects\simone\stylesheets\style.css
+// Variables
+// Fonts
+$primary: 'Roboto Condensed', sans-serif
+$secondry : 'Cormorant Garamond', serif
+$third : 'Libre Caslon Display', serif
+$fourth : 'Rajdhani', sans-serif
+
+// Color Palette
+$white : #fff
+$snow : #b9b9b9
+$azure : #565656
+$dimgray : #393a34
+$silver: #6f6f6f
+$lightgrey: #4c4c4c
+$black: #000
+$panels-bg : #393a34f0
+
+html, body 
+  background: black
+  color: $white
+  font-family: $primary
+  font-size: .8vw
+  scroll-behavior: smooth
+  transform-style: preserve-3d
+  overflow-x: hidden
+  overflow-y: hidden
+img 
+  height: 100%
+  width: 100%
+a 
+  color: $white
+  &:hover
+    color: $white
+    text-decoration: none
+
+
+.panel-fadein 
+  top: 0 !important
+  transition: 1s all ease-in-out
+.panel-fadeout
+  top: -300vw !important
+  transition: 1s all ease-in-out
+
+// Start BOM 
+::-webkit-scrollbar 
+  width: 10px
+  height: 10px
+  background-color: $lightgrey
+  opacity: 1
+
+::-webkit-scrollbar-track 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0)
+
+
+::-webkit-scrollbar-thumb 
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5)
+  background: $snow
+  &:hover 
+    background: $white
+// Start animation    
+.fadeIn
+  opacity: 1!important
+  transition: all ease-in-out .8s
+  animation: fadeIn .8s
+  margin-bottom: 0!important
+
+@keyframes fadeIn 
+  0%
+      margin-top: 3vw
+  100%
+      margin-top: 0
+
+h1, h2, h3, h5, h6, a, p, hr, .sample img, .about img, span, i, ol, .indicate, .carousel-inner 
+  opacity: 0
+  margin-bottom: -5vw!important
+  transition: .5s all ease-in-out
+.panels *, .home *, .captions *, .carousel-caption *
+  opacity: 1!important
+  margin-bottom: 0!important 
+.captions *
+  margin-bottom: 0!important 
+// Start No script 
+noscript
+  div
+    padding: 3vw 2vw
+    position: fixed
+    top: 0 
+    left: 0
+    height: 100vh 
+    width: 100vw
+    z-index: 100
+    background: white
+    color: black
+// Start Loader
+.loader-wrapper 
+  width: 100%
+  height: 100%
+  position: fixed
+  top: 0
+  left: 0
+  background-color: $black
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 100
+  .loader 
+    width: 2vw
+    height: 2vw
+    position: absolute
+    top: 45%                  
+    border: .2vw solid $white
+    animation: loader 2s infinite ease
+    .loader-inner 
+      display: inline-block
+      vertical-align: top
+      width: 300%
+      height: 50%
+      background-color: $white
+      animation: loader-inner 2s infinite ease-in
+      position: absolute
+      top: .9vw
+      left: 0vw
+
+  @keyframes loader 
+    0% 
+      transform: rotate(0deg)
+    25%  
+      transform: rotate(180deg)
+    50%  
+      transform: rotate(180deg)
+    75%  
+      transform: rotate(360deg)
+    100%  
+      transform: rotate(360deg)
+
+  @keyframes loader-inner 
+    0%  
+      height: 2%
+      transform: rotate(-180deg)
+    25% 
+      height: 2%
+      transform: rotate(360deg)
+    50%  
+      height: 5%
+      transform: rotate(180deg)
+    75%  
+      height: 5%
+      transform: rotate(0deg)
+    100%  
+      height: 2%
+      transform: rotate(-180deg)          
+// Start Home 
+.home
+  position: relative
+  .carousel-indicators
+    justify-content: left
+    z-index: 1
+    li
+      width: .5vw
+      height: .5vw
+      border-radius: 50%
+      margin: 0 .5vw
+    .active
+      width: 1.1vw
+      height: 1.3vw
+      background: transparent
+      border-bottom: 1px solid white
+      display: inline-block
+      border-radius: 0
+      text-indent: 0
+      font-size: .7vw
+      margin: -.3vw .1vw
+      vertical-align: top
+      span 
+        color: $white
+  .prog
+    justify-content: left
+    z-index: 1
+    position: absolute
+    top: 62%
+    left: 25%
+    margin: 0
+    li
+      width: 11.5vw
+      height: .1vw
+      border-radius: 0
+      margin: 0
+      border-bottom: .08vw solid $white
+      display: inline-block
+      &:nth-of-type(2)
+        width: 50vw
+        border-bottom: .08vw solid $snow
+      
+  .carousel-inner
+    transition: .5s all ease-in-out
+    .carousel-item
+      height: 100vh
+      background-size: cover
+      background-position: center
+      &:nth-last-of-type(1)
+        background-image: url('https://images.pexels.com/photos/851238/pexels-photo-851238.jpeg?cs=srgb&dl=architecture-contemporary-furniture-851238.jpg&fm=jpg')
+      &:nth-last-of-type(2)
+        background-image: url('https://images.pexels.com/photos/312029/pexels-photo-312029.jpeg?cs=srgb&dl=architectural-design-architecture-chairs-312029.jpg&fm=jpg')
+      &:nth-last-of-type(3)
+        background-image: url('https://images.pexels.com/photos/2319426/pexels-photo-2319426.jpeg?cs=srgb&dl=architecture-backlit-chairs-2319426.jpg&fm=jpg')
+      &:nth-last-of-type(4)
+        background-image: url('https://images.pexels.com/photos/2889618/pexels-photo-2889618.jpeg?cs=srgb&dl=bedroom-contemporary-curtains-2889618.jpg&fm=jpg')
+      &:nth-last-of-type(5)
+        background-image: url('https://images.pexels.com/photos/260928/pexels-photo-260928.jpeg?cs=srgb&dl=black-and-white-blackboard-blinds-260928.jpg&fm=jpg')
+      &:nth-last-of-type(6)
+        background-image: url('https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?cs=srgb&dl=apartment-bed-chair-189333.jpg&fm=jpg')
+      .carousel-caption
+        bottom: 40vh
+        left: 26%
+        text-align: left
+        h6
+          font-family: $fourth
+          font-size: 1vw
+          margin-bottom: 3vw!important
+          letter-spacing: .2vw
+          text-transform: uppercase
+        h1
+          font-family: $secondry
+          font-size: 6vw
+          width: 40vw
+          margin: -1.5vw 0!important
+          cursor: pointer
+  a
+    width: 2%     
+  .n-p
+    position: absolute
+    bottom: 5vw
+    right: 8vw
+    width: 20%
+    .carousel-control-next, 
+    .carousel-control-prev
+      position: relative
+      display: inline-block
+      font-family: $secondry
+      opacity: 1
+      width: 27%
+      letter-spacing: .1vw
+    hr 
+      background: #fff
+      height: .01vw
+      width: 3vw
+      display: inline-block
+      margin: 1vw 1vw 0
+// Start Navigate    
+.navigate
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 1vw
+  padding: 4vw 8vw
+  z-index: 10
+  transition: .5s all ease-in-out
+  > div
+    display: inline-block
+    height: 100%
+    i 
+      margin-right: 1vw
+      cursor: pointer
+    &:nth-of-type(1)
+      width: 3%
+      margin-right: 5%
+    &:nth-of-type(2)
+      width: 8%
+    &:nth-of-type(4),
+    &:nth-of-type(5)
+      width: 11%
+    span 
+      text-transform: uppercase
+      color: $snow
+      letter-spacing: .1vw
+      cursor: pointer
+  .logo, i   
+    color: $white
+  .menu
+    height: 2vw
+    cursor: pointer
+    .line
+      width: 2.5vw
+      height: .1vw
+      margin-bottom: .8vw!important
+      background: $white
+      transition: all ease-in-out .2s
+  .logo 
+    text-align: center
+    width: 60% 
+    font-family: $secondry
+    font-size: 2vw
+  .brands
+    .icon, span 
+      display: inline-block
+      vertical-align: top
+    .icon 
+      width: 10%
+      height: 1vw
+      margin: .1vw .7vw
+      cursor: pointer
+      .sq
+        border: solid 1px $white
+        display: inline-block
+        width: 37%
+        height: 39%
+        margin: 0
+        margin: 6%
+        float: left
+
+// Start Panels
+.panels
+  height: 100vh
+  width: 100vw
+  position: fixed
+  top: 0
+  left: 0
+  z-index: -1
+  > div
+    top: -300vw
+    left: 0 
+    font-family: $secondry
+    color: $white
+    background: $panels-bg
+    height: 100vh
+    width: 100vw
+    position: absolute
+    z-index: 20 
+    border: $lightgrey solid .1vw
+    .close-it 
+      span 
+        cursor: pointer
+  .menu
+    .titles, 
+    .contact-us, 
+    .opening-hours
+      display: inline-block
+      vertical-align: top
+    .titles
+      width: 45%
+      padding: 4vw 0 0 13vw
+      text-transform: capitalize
+      .close-it 
+        span
+          display: inline-block
+          margin-bottom: 10vw!important
+          &:first-of-type
+            font-family: $fourth
+            transform: scale(1.4,1)
+            margin-left: 4vw
+          &:nth-of-type(2)
+            padding-left: .5vw
+            color: $silver
+            text-transform: uppercase
+      h2
+        margin-bottom: 2vw!important
+    .contact-us,
+    .opening-hours
+      font-family: $primary
+      height: 100%
+      span 
+        display: block
+        font-size: .6vw
+        margin-bottom: .4vw!important
+    .contact-us 
+      width: 20%
+      padding: 32% 3vw
+      border-color: $lightgrey
+      border-style: solid 
+      border-width: 0 .01vw 0 .01vw
+      span 
+        &:nth-of-type(4)
+          margin-top: 2vw!important
+      .social 
+        margin-top: 2vw!important
+        i 
+          margin-right: .5vw
+    .opening-hours
+      width: 30%
+      padding: 35% 3vw
+      span
+        &:nth-of-type(3), 
+        &:nth-of-type(5)
+          margin-top: 2vw!important
+  .search
+    padding: 4vw 0 0 13vw
+    text-transform: capitalize
+    span
+      display: inline-block
+      &:first-of-type
+        font-family: $fourth
+        transform: scale(1.4,1)
+        margin-left: 4vw
+      &:nth-of-type(2)
+        padding-left: .5vw
+        color: $silver
+        text-transform: uppercase
+    input 
+      display: block
+      margin: 4vw 7vw!important
+      width: 70%
+      background: transparent
+      border: 0
+      border-bottom: 1px solid #fff
+      font-size: 2vw
+      padding: 1vw 0
+      letter-spacing: .1vw
+      font-family: $fourth
+      outline: none
+      color: $white 
+  .brands 
+    padding: 4vw 0 0
+    text-transform: capitalize
+    overflow-x: scroll 
+    .close-it
+      position: fixed
+      top: -300vw 
+      right: 20%
+      transition: all ease-in-out 1s
+      span
+        display: inline-block
+        &:first-of-type
+          font-family: $fourth
+          transform: scale(1.4,1)
+          margin-left: 4vw
+        &:nth-of-type(2)
+          padding-left: .5vw
+          color: $silver
+          text-transform: uppercase
+    .list
+      margin: 4vw 7vw
+      width: 488vw
+      height: 20vw
+      position: absolute
+      top: 4vw !important
+      left: 0
+      .item
+        width: 40vw
+        height: 35vw
+        display: inline-block
+        .img
+          width: 100%
+          height: 22vw
+          padding: 0 2.5vw
+        .caption 
+          text-align: center
+          h2
+            border-bottom: .01vw solid $snow
+            padding: 3vw 0 1.5vw
+          h6 
+            font-size: 1rem
+            padding: 1vw
+            letter-spacing: .1vw
+
+  .in-stock
+    padding: 4vw
+    text-transform: capitalize
+    .form
+      width: 28vw
+      height: 31vw
+      background: $black
+      padding: 2vw
+      position: absolute
+      right: 13vw
+      top: 4vw
+      .close-it
+        z-index: 1
+        span
+          display: inline-block
+          font-family: $fourth
+          &:first-of-type
+            text-transform: uppercase
+            margin-left: 19vw
+          &:nth-of-type(2)
+            padding-left: .5vw
+            transform: scale(1.4,1)
+      .wrap    
+        input 
+          display: block
+          margin-bottom: 1vw
+          width: 100%
+          background: $black
+          border: 0
+          border-bottom: 1px solid $silver
+          font-size: 1vw
+          padding: .1vw 0
+          letter-spacing: .1vw
+          font-family: $fourth
+          outline: none
+          color: $white
+          &[type='checkbox']
+            display: inline-block
+            width: 10%
+            margin-top: 2vw
+        button
+          display: block
+          margin: 2vw 0 0 68%
+          background: $black
+          color: $white
+          border: 0
+          font-size: 1.2vw
+          outline: none
+          
+// Start Products
+.products
+  position: relative
+  padding: 10vw 7vw
+  .carousel-item 
+    width: 100%
+    height: 100%
+  .square 
+    width: 35vw 
+    height: 38vw
+    position: absolute
+    top: 12vw 
+    right: 17vw 
+    background: $dimgray
+    z-index: -1
+  .title  
+    h3
+      font-family: $primary
+      margin: 0 7vw
+      font-size: .8vw
+      text-transform: uppercase
+      padding: .8vw 0
+      width: 10vw
+      font-family: $third
+      letter-spacing: .4vw
+      &:first-of-type
+        border-bottom: solid .1vw $azure
+  .category 
+    padding: 6vw
+    text-align: right
+    span
+      font-size: 1.2vw
+      font-family: $third
+      color: #b9b9b9
+      cursor: pointer
+      padding: 2vw 0
+      margin: 0 2vw
+    .active 
+      color: $white  
+  .slider
+    width: 100%
+    .left, .right, .carousel
+      display: inline-block
+      margin: 0 1vw
+      vertical-align: top
+    .left, .right
+      width: 20vw
+      height: 14vw 
+      margin-top: 4vw
+      .carousel-inner
+        width: 20vw
+        height: 14vw
+    .right
+      margin-top: 9vw   
+    .middle
+      width: 32vw
+      height: 33vw
+      position: relative
+      .carousel-inner
+        height: 25vw
+        .carousel-caption 
+          text-align: left
+          bottom: 5%
+          left: 10%
+          h5 
+            font-size: 2vw
+          p 
+            font-size: 1vw  
+      .indicate 
+        width: 8vw
+        position: absolute
+        left: 42%
+        bottom: -0.5vw
+        a
+          display: inline-block
+          vertical-align: top
+          position: relative
+          margin: 0
+          color: $white
+          font-size: 1.4vw
+          transform: scale(1, 1.6)
+          opacity: 1
+          width: 5%
+        span 
+          padding: 0 .3vw 0 1.5vw
+          letter-spacing: .7vw
+          font-size: 1.1vw
+          margin-top: .3vw
+          opacity: 1 !important
+          color: $silver
+          font-weight: 600
+          b 
+            color: $white
+        .carousel-indicators
+          position: absolute
+          top: .2vw
+          left: 1vw
+          width: 1vw
+          li
+            width: .5vw
+            height: .5vw
+            margin: -.6vw -0.6vw
+            position: absolute
+            top: 0
+            left: 0
+            background: transparent
+          .active
+            text-indent: 0
+            width: .5vw
+            height: .5vw
+            color: $white
+            font-size: 1vw
+            vertical-align: top
+            background: transparent
+  .read
+    width: 100%
+    padding: 10vw 8vw
+    font-size: .9vw
+    text-align: right
+  .sample
+    padding-left: 8vw
+    img
+      &:first-of-type
+        width: 39vw 
+        height: 45vw
+        margin-right: 3vw
+      &:nth-of-type(2)
+        width: 29vw 
+        height: 36vw
+        margin-top: 28vw
+// Start Projects
+.projects
+  position: relative
+  padding: 10vw 0
+  .square 
+    width: 47vw
+    height: 22vw
+    position: absolute
+    top: 35vw
+    right: 7vw
+    background: $dimgray
+    z-index: -1
+  .title
+    font-family: $primary
+    margin: 0 8vw
+    text-transform: uppercase
+    width: 10vw
+    transform: rotate(-90deg)
+    position: absolute
+    top: 25vw
+    left: 5vw
+    h3
+      width: 100%
+      padding: .8vw 0
+      font-size: .8vw
+      margin: 0
+      font-family: $third
+      letter-spacing: .4vw
+      &:first-of-type
+        border-bottom: solid .1vw $azure
+  .captions
+    position: absolute
+    top: 21vw
+    left: 26vw
+    text-align: left
+    .carousel-inner 
+      height: 50vw
+      width: 28.3vw
+    .carousel-caption  
+      position: absolute
+      top: 0
+      left: 0
+      font-family: $third
+      width: 25vw
+      text-align: left
+      span, p, a
+        font-size: 1vw
+      span 
+        display: block
+        margin-top: 1vw!important
+      p, a
+        margin-top: 1vw!important
+        line-height: 2vw
+        letter-spacing: .01vw
+      a 
+        letter-spacing: .1vw
+  .slider
+    width: 100%
+    text-align: right
+    height: 45vw
+    .indicate 
+      width: 8vw
+      position: absolute
+      top: 30vw
+      left: 24.5vw
+      a
+        display: inline-block
+        vertical-align: top
+        position: relative
+        margin: 0
+        color: $white
+        font-size: 1.4vw
+        transform: scale(1, 1.6)
+        opacity: 1
+        width: 5%
+      span 
+        padding: 0 0.3vw 0 2.5vw
+        letter-spacing: .7vw
+        font-size: 1.1vw
+        margin-top: .3vw
+        opacity: 1 !important
+        color: $silver
+        font-weight: 600
+        vertical-align: top
+        b 
+          color: $white
+      .carousel-indicators
+        position: absolute
+        top: .23vw
+        left: 2.8vw
+        width: 1vw
+        li
+          width: .5vw
+          height: .5vw
+          margin: -.6vw -0.6vw
+          position: absolute
+          top: 0
+          left: 0
+          background: transparent
+          opacity: 0
+          transition: .1s all ease-in-out
+        .active
+          text-indent: 0
+          width: .5vw
+          height: .5vw
+          color: $white
+          font-size: 1vw
+          vertical-align: top
+          background: transparent
+          opacity: 1
+    .carousel-inner
+      width: 45vw
+      height: 32vw
+      position: absolute
+      right: 0
+      .carousel-item
+        width: 100%
+        height: 100%    
+        position: absolute
+  
+// Start News          
+.news
+  width: 100%
+  padding: 10vw
+  font-size: .9vw
+  .title
+    font-family: $primary
+    margin-left: 73vw
+    text-transform: uppercase
+    width: 10vw
+    h3
+      width: 100%
+      padding: .8vw 0
+      font-size: .8vw
+      margin: 0
+      font-family: $third
+      letter-spacing: .4vw
+      &:first-of-type
+        border-bottom: solid .1vw $azure
+  .list 
+    padding: 5vw
+    > div 
+      padding: 3vw
+    span
+      color: $silver
+      margin: 2vw 0
+      display: block
+      font-size: 1vw
+      letter-spacing: .1vw
+      &:nth-of-type(2)
+        color: $white
+    p 
+      line-height: 2vw
+      font-size: .9vw
+  .sample
+    position: relative
+    perspective: 8px
+    perspective-origin: 0%
+    .square 
+      width: 43vw 
+      height: 38vw
+      position: absolute
+      top: 20vw
+      left: 5vw
+      background: $dimgray
+      z-index: -1
+    .img 
+      width: 48vw
+      height: 55vw
+      margin: 8vw 26vw
+      min-height: 55vw
+      background: transparent
+      
+    
+    
+
+// Start About 
+.about
+  padding: 3vw
+  .img, .title, .desc
+    display: inline-block
+    vertical-align: top
+  .img 
+    width: 40vw
+    height: 50vw 
+  .title  
+    font-family: $primary
+    margin: 16vw 3vw
+    text-transform: uppercase
+    width: 10vw
+    transform: rotate(-90deg)
+    h3
+      width: 100%
+      padding: .8vw 0
+      font-size: .8vw
+      margin: 0
+      letter-spacing: .1vw
+      &:first-of-type
+        border-bottom: solid .1vw $azure
+  .desc 
+    width: 30vw
+    margin: 18vw 0
+    p 
+      line-height: 2vw
+      font-size: .9vw
+      margin-top: 5vw
+
+// Start Contact
+.contact 
+  text-align: center
+  font-size: .8vw
+  letter-spacing: .1vw
+  padding-bottom: 7vw
+  .social
+    margin: 1vw
+    i 
+      font-size: 1.2vw
+      margin-right: .6vw
+  .info 
+    span 
+      border-right: .05vw solid #fff
+      padding: .6vw
+      font-size: .7vw
+      letter-spacing: .05vw
+      &:last-of-type
+        border: hidden
+  .cc 
+    margin: 1vw
+    font-size: .6vw
+    letter-spacing: .01vw     
+  /* ------------------------------------------------- End Of Large Screens ------------------------------------------------------ */       
+
+
+@media  (max-width: 950px)
+  h1 
+    font-size: 10vw
+    
+  h2
+    font-size: 7vw
+  h3, p
+    font-size: 3vw !important
+  a
+    font-size: 4vw!important
+  h6, div, span
+    font-size: 2vw!important
+  input, button
+    font-size: 3vw
+  // Start Loader
+  .loader-wrapper 
+    .loader 
+      width: 7vw!important
+      height: 7vw!important
+
+  // Start Home 
+  .home
+    .carousel-inner
+      transition: .5s all ease-in-out
+      .carousel-item
+        height: 100vh
+        background-position: center
+        .carousel-caption
+          display: block !important
+          bottom: 45vh
+          left: 8%
+          h6 
+            margin-bottom: 4vw
+    .carousel-indicators
+      bottom: 30vw
+      li
+        width: 1vw
+        height: 1vw
+        margin: -.3vw 1vw
+      .active
+        width: 2vw
+        height: 4vw
+        font-size: 2vw
+        margin: -1vw 1vw
+    .prog
+      height: 1vw
+      li 
+        width: 11.5vw
+        height: .5vw
+        margin: 0
+      .active
+        margin: -4vw 0
+    .n-p 
+      hr 
+        margin: 1vw 1vw 0 3vw    
+  // Start navigate
+  .navigate 
+    .search, 
+    .brands,
+    .in-stock
+      width: 8%!important
+      i
+        font-size:  3vw
+      span
+        display: none  
+    .logo
+      font-size: 5vw !important 
+    .brands 
+      .icon
+        width: 45%!important
+        .sq
+          width: 35%
+          height: 95%  
+  // Start Panels 
+  .panels 
+    .menu
+      position: relative
+      height: 100vh
+      .titles, .contact-us 
+        width: 45%
+        height: auto
+      .titles
+        padding: 4vh 0 0 7vh
+        h2
+          font-size: 4vh!important
+        .close-it
+          span 
+            font-size: 3vw!important
+            margin: 2vw 1vw
+            margin-bottom: 4vh !important
+      .contact-us
+        position: absolute
+        bottom: 2vh
+        left: 0
+        border: 0
+        padding: 0
+        padding-left: 5vh
+        span 
+          color: $white
+        .social 
+          i 
+            margin-right: 2vw  
+      .opening-hours
+        position: relative
+        width: 50%
+        border-left: $lightgrey solid .01vw!important
+        .wrapper
+          padding: 3vh
+          position: absolute
+          bottom: 2vh
+          span
+            color: $white 
+            &:last-of-type
+              margin-top: 6vh
+    .search
+      padding: 4vh 0 0 3vh
+      .close-it
+        margin-left: 2vh
+        span 
+          font-size: 3vw!important
+          margin: 2vh 1vh 10vh
+      input 
+        margin: 4vh 0vh!important
+        width: 93%
+        font-size: 3vw
+        padding: 4vh 0
+    .brands
+      padding-top: 0
+      .close-it
+        display: none
+      .list 
+        width: 90%
+        height: 100%!important
+        text-align: center
+        overflow-y: scroll
+        margin-top: 0 
+        padding-top: 0
+        .item 
+          width: 80%
+          height: 60vw
+          .img 
+            height: 40vw
+          .caption 
+            h2 
+              font-size: 4vw
+            h6 
+              padding-top: 7vw  
+    
+    .in-stock
+      padding: 4vh 0 0 5vh
+      height: 100vh
+      .form
+        width: 90vw
+        height: 90vh
+        padding: 2vh
+        right: 7vw
+        .close-it
+          position: absolute
+          top: 3vh 
+          right: 5vh
+          span 
+            font-size: 3vw!important
+            margin: 2vh 1vh 10vh
+            color: $white
+        .wrap
+          position: absolute
+          top: 0vh 
+          left: 5vh
+          width: 80vw 
+          padding: 10vh 0
+          label
+            font-size: 3vw 
+          input 
+            font-size: 2vw
+            padding: 1vh
+            margin-bottom: 2vh
+          button 
+            font-size: 4vh
+            position: absolute
+            bottom: 0
+            right: 0               
+  // Start Products 
+  .products 
+    padding: 3vw
+    .square 
+      top: 25vw
+      left: 47vw
+      width: 60vw
+      height: 50vw
+    .title
+      padding-top: 10vw
+      h3 
+        margin: 0
+        width: 33vw
+        font-family: $third
+        letter-spacing: .4vw
+    .category 
+      text-align: center
+      span
+        font-size: 3vw!important
+    .slider
+      text-align: center
+      .left, 
+      .right
+        display: none
+      .middle
+        width: 90vw
+        height: 65vw
+        .carousel-inner 
+          height: 100%
+      .indicate
+        width: 20vw!important
+        left: 38%!important
+        top: 70vw
+        margin: 0
+        span
+          font-size: 3vw!important
+          margin: 0.8vw 1vw 0 4vw
+        .carousel-indicators
+          top: -1vw !important
+          left: 5.2vw !important
+          .active
+            font-size: 3vw!important
+    .read 
+      padding: 10vw 0
+      a 
+        font-size: 3vw !important
+        font-family: $third
+    .sample 
+      padding: 0
+      text-align: center 
+      img 
+        &:first-of-type
+          width: 100%
+          height: 100vw
+          margin: 0 
+        &:nth-of-type(2)
+          width: 70vw 
+          height: 70vw
+          margin: -7vw 0 0 28vw
+  // Start Projects 
+  .projects 
+    .title
+      padding-top: 10vw
+      transform: none
+      h3 
+        margin: 0
+        width: 33vw
+        padding: 1.5vw 0
+        font-family: $third
+        letter-spacing: .4vw
+        &:first-of-type
+          border-bottom: solid .1vw $azure
+    .captions 
+      display: none
+    .slider
+      padding-left: 1vw
+      height: 62vw
+      .carousel-inner
+        width: 93vw
+        height: 60vw
+      .indicate
+        width: 20vw!important
+        left: 38%!important
+        top: 70vw
+        margin: 0
+        span
+          font-size: 3vw!important
+          margin: 0.8vw 1vw 0 4vw
+        .carousel-indicators
+          top: -1vw !important
+          left: 7.8vw !important
+          .active
+            font-size: 3vw!important    
+    
+        
+  // Start News 
+  .news
+    padding: 0
+    .title
+      padding-top: 10vw
+      margin-left: 60vw
+      text-transform: uppercase
+      width: 23vw
+      h3 
+        margin: 0
+        width: 30vw
+        padding: 1.5vw 0
+        font-family: $third
+        letter-spacing: .4vw
+        &:first-of-type
+          border-bottom: solid .1vw $azure
+    .list 
+      padding: 6vw
+      > div
+        padding: 10vw 0 
+        span
+          font-size: 4vw!important
+          font-family: $third
+        p 
+          line-height: 7vw
+          letter-spacing: .1vw
+        a 
+          font-size: 3vw!important
+    .sample
+      .square 
+        width: 82vw
+        height: 42vw
+        position: absolute
+        top: 65vw
+        left: 0
+      .img
+        width: 90vw
+        height: 90vw
+        margin: 8vw 3vw
+  // Start About 
+  .about 
+    .img 
+      display: none
+    .title
+      padding-top: 10vw
+      transform: none
+      h3 
+        margin: 0
+        width: 33vw
+        padding: 1.5vw 0
+        font-family: $third
+        letter-spacing: .4vw
+        &:first-of-type
+          border-bottom: solid .1vw $azure
+    .desc
+      width: 100vw
+      p
+        width: 90vw 
+        line-height: 7vw
+        letter-spacing: .1vw
+      a 
+        display: none
+  // Start Contact 
+  .contact 
+    letter-spacing: .1vw
+    padding: 10vw
+    span 
+      font-size: 3vw!important
+    .social
+      margin: 5vw
+      i 
+        font-size: 4vw
+        margin-right: 2vw
+    .info 
+      span
+        font-size: 2.3vw!important
+        display: block
+        border: 0
+        &:last-of-type
+          border: hidden
+    .cc 
+      margin: 5vw
+   
+  
+       
+
+  /* ------------------------------------------------- End Of Small Screens ------------------------------------------------------ */
+
+
+
+
+
+    

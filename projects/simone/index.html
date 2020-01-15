@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Paolo Simone</title>
+    <link rel="shortcut icon" href="images/logo.png">
+    <!-- Google Fonts css -->
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Oswald&amp;display=swap" rel="stylesheet">
+    <!-- Font Awesome CSS-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap Css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- Script Vue-->
+    <script src="https://cdn.jsdelivr.net/npm/vue" defer="defer"></script>
+  </head>
+  <body>
+    <!-- If Javascript is not enabled in the browser-->
+    <noscript>
+      <div>
+        <p>This site requires <b>JavaScript</b>.</p>
+        <p>It will only be visible if you have it enabled.</p>
+      </div>
+    </noscript>
+    <!-- Start Home -->
+    <div class="home carousel slide" id="home" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li class="active" data-target="#home" data-slide-to="0">01</li>
+        <li data-target="#home" data-slide-to="1">02</li>
+        <li data-target="#home" data-slide-to="2">03</li>
+        <li data-target="#home" data-slide-to="3">04</li>
+        <li data-target="#home" data-slide-to="4">05</li>
+        <li data-target="#home" data-slide-to="5">06</li>
+      </ol>
+      <ol class="prog">
+        <li></li>
+        <li></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="carousel-caption d-none d-md-block">
+            <h6>Furnishing </h6>
+            <h1>CATERINA </h1>
+            <h1>ADOLFO</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h6>Furnishing</h6>
+            <h1>EDMONDO </h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h6>Furnishing</h6>
+            <h1>Cornell </h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h6>Furnishing</h6>
+            <h1>Albanese </h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h6>Furnishing</h6>
+            <h1>AGOSTINO</h1>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="carousel-caption d-none d-md-block">
+            <h6>Furnishing</h6>
+            <h1>AMATO</h1>
+          </div>
+        </div><a class="carousel-control-prev" href="#home" role="button" data-slide="prev"></a><a class="carousel-control-next" href="#home" role="button" data-slide="next">   </a>
+      </div>
+      <div class="n-p">   <a class="carousel-control-prev" href="#home" role="button" data-slide="prev"><span aria-hidden="true">Previous</span></a>
+        <hr><a class="carousel-control-next" href="#home" role="button" data-slide="next"><span aria-hidden="true">Next</span></a>
+      </div>
+    </div>
+    <!-- Start Navigate -->
+    <div class="navigate">
+      <div class="menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="search"><i class="fa fa-search"> </i><span>search</span></div>
+      <div class="logo">P. Simone</div>
+      <div class="brands">
+        <div class="icon">
+          <div class="sq"></div>
+          <div class="sq"></div>
+          <div class="sq"></div>
+          <div class="sq"></div>
+        </div><span>Brands</span>
+      </div>
+      <div class="in-stock"><i class="fa fa-lock"> </i><span>In stock</span></div>
+    </div>
+    <!-- Start Panels-->
+    <div class="panels">
+      <div class="menu">
+        <div class="titles">
+          <div class="close-it"><span>x</span><span>Close</span></div>
+          <h2>our story </h2>
+          <h2>projects</h2>
+          <h2>products</h2>
+          <h2>news</h2>
+          <h2>contact us</h2>
+        </div>
+        <div class="contact-us">
+          <div class="info"><span>3127  Doctors Drive</span><span>Los Angeles</span><span>California</span><span>+1-202-555-0186</span><span>+1-202-555-0111</span><span>info@paolosimone.com</span></div>
+          <div class="social"><i class="fa fa-facebook"></i><i class="fa fa-instagram"> </i><i class="fa fa-google-plus"></i></div>
+        </div>
+        <div class="opening-hours">
+          <div class='wrapper'>
+              <span>Sunday - Thursday</span>
+              <span>09.00 A.M - 06.00 P.M</span>
+              <span>Friday - Sunday</span>
+              <span>Appointment Only</span>
+              <span>Privacy &a; Cookie Policy</span>
+          </div>
+        </div>
+      </div>
+      <div class="search">
+        <div class="close-it"><span>x</span><span>Close</span></div>
+        <input placeholder="Search For Products, Barands and News">
+      </div>
+      <div class="brands">
+          <div class="close-it"><span>Close</span><span>x</span></div>
+        <div class="list">
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/2225570/pexels-photo-2225570.jpeg?cs=srgb&amp;dl=ceiling-chairs-clean-2225570.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>EDMONDO </h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/1790230/pexels-photo-1790230.jpeg?cs=srgb&amp;dl=ceiling-chairs-comfort-1790230.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>AMATO </h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/2517507/pexels-photo-2517507.jpeg?cs=srgb&amp;dl=ceiling-chandelier-contemporary-2517507.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>AGOSTINO </h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?cs=srgb&amp;dl=building-chair-comfort-276528.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>CATERINA </h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/276677/pexels-photo-276677.jpeg?cs=srgb&amp;dl=ceiling-chandelier-comfort-276677.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>ADOLFO </h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/2287310/pexels-photo-2287310.jpeg?cs=srgb&amp;dl=architectural-design-architecture-country-home-2287310.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>Cornell </h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?cs=srgb&amp;dl=airbnb-apartment-appartment-584399.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>Albanese </h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?cs=srgb&amp;dl=apartment-architectural-design-architecture-1115804.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>Tonia</h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/1918291/pexels-photo-1918291.jpeg?cs=srgb&amp;dl=apartment-chair-chicago-1918291.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>De Rossi</h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/276510/pexels-photo-276510.jpeg?cs=srgb&amp;dl=architecture-building-chairs-276510.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>Mike</h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/2635038/pexels-photo-2635038.jpeg?cs=srgb&amp;dl=apartment-chairs-contemporary-2635038.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>Barsali </h2>
+              <h6>Furnishing</h6>
+            </div>
+          </div>
+          <div class="item">
+            <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?cs=srgb&amp;dl=ceiling-clean-contemporary-1457842.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="caption">
+              <h2>Rome</h2>
+              <h6>Furnishing                    </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="in-stock">
+        <div class="form">
+          <div class="close-it"><span>Close</span><span>x</span></div>
+          <div class="wrap">
+            <label>Name</label>
+            <input>
+            <label>E-Mail</label>
+            <input>
+            <label>Phone Number</label>
+            <input>
+            <label>Company</label>
+            <input>
+            <input type="checkbox">
+            <label>SUBSCRIBE TO NEWSLETTERS</label>
+            <button>Request Stock</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start Products-->
+    <div class="products">
+      <div class="square"></div>
+      <div class="title">
+        <h3>Featured</h3>
+        <h3>products</h3>
+      </div>
+      <div class="category"><span class="active">Furniture </span><span>Furnitshing </span><span>Lighting</span></div>
+      <div class="slider">
+        <div class="left carousel slide" id="left" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img class="d-block w-100" src="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?cs=srgb&amp;dl=apartment-clean-condominium-279719.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/2517507/pexels-photo-2517507.jpeg?cs=srgb&amp;dl=ceiling-chandelier-contemporary-2517507.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/1790230/pexels-photo-1790230.jpeg?cs=srgb&amp;dl=ceiling-chairs-comfort-1790230.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?cs=srgb&amp;dl=building-chair-comfort-276528.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/276677/pexels-photo-276677.jpeg?cs=srgb&amp;dl=ceiling-chandelier-comfort-276677.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?cs=srgb&amp;dl=aircon-apartment-architectural-design-2251247.jpg&amp;fm=jpg" alt="..."></div>
+          </div>
+        </div>
+        <div class="middle carousel slide" id="products" data-ride="carousel" data-interval="false">
+          <div class="indicate"><a class="carousel-control-prev" href="#products" role="button" data-slide="prev">&lt;</a><span> <b>/</b>6</span>
+            <ol class="carousel-indicators">
+              <li class="active" data-target="#products" data-slide-to="0">1</li>
+              <li data-target="#products" data-slide-to="1">2</li>
+              <li data-target="#products" data-slide-to="2">3</li>
+              <li data-target="#products" data-slide-to="3">4</li>
+              <li data-target="#products" data-slide-to="4">5</li>
+              <li data-target="#products" data-slide-to="5">6</li>
+            </ol><a class="carousel-control-prev" href="#products" role="button" data-slide="next">&gt;  </a>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/2517507/pexels-photo-2517507.jpeg?cs=srgb&amp;dl=ceiling-chandelier-contemporary-2517507.jpg&amp;fm=jpg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Albanese</h5>
+                <p>Nulla vitae elit libero.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/1790230/pexels-photo-1790230.jpeg?cs=srgb&amp;dl=ceiling-chairs-comfort-1790230.jpg&amp;fm=jpg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>AMATO</h5>
+                  <p>Nulla vitae elit libero.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?cs=srgb&amp;dl=building-chair-comfort-276528.jpg&amp;fm=jpg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>EDMONDO</h5>
+                  <p>Nulla vitae elit libero.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/276677/pexels-photo-276677.jpeg?cs=srgb&amp;dl=ceiling-chandelier-comfort-276677.jpg&amp;fm=jpg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>ADOLFO</h5>
+                  <p>Nulla vitae elit libero.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?cs=srgb&amp;dl=aircon-apartment-architectural-design-2251247.jpg&amp;fm=jpg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>CATERINA</h5>
+                  <p>Nulla vitae elit libero.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?cs=srgb&amp;dl=apartment-clean-condominium-279719.jpg&amp;fm=jpg" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Cornell Lightening</h5>
+                  <p>Nulla vitae elit libero.</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="right carousel slide" id="right" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img class="d-block w-100" src="https://images.pexels.com/photos/1790230/pexels-photo-1790230.jpeg?cs=srgb&amp;dl=ceiling-chairs-comfort-1790230.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/276528/pexels-photo-276528.jpeg?cs=srgb&amp;dl=building-chair-comfort-276528.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/276677/pexels-photo-276677.jpeg?cs=srgb&amp;dl=ceiling-chandelier-comfort-276677.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/2251247/pexels-photo-2251247.jpeg?cs=srgb&amp;dl=aircon-apartment-architectural-design-2251247.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?cs=srgb&amp;dl=apartment-clean-condominium-279719.jpg&amp;fm=jpg" alt="..."></div>
+            <div class="carousel-item"><img class="d-block w-100" src="https://images.pexels.com/photos/2517507/pexels-photo-2517507.jpeg?cs=srgb&amp;dl=ceiling-chandelier-contemporary-2517507.jpg&amp;fm=jpg" alt="..."></div>
+          </div>
+        </div>
+      </div>
+      <div class="read"> <a href="#">Read More </a></div>
+      <div class="sample"><img src="https://images.pexels.com/photos/2236946/pexels-photo-2236946.jpeg?cs=srgb&amp;dl=architecture-building-chairs-2236946.jpg&amp;fm=jpg" alt="..."><img src="https://images.pexels.com/photos/2218382/pexels-photo-2218382.jpeg?cs=srgb&amp;dl=decoration-flower-arrangement-flowers-2218382.jpg&amp;fm=jpg" alt="..."></div>
+    </div>
+    <!-- Start Projects-->
+    <div class="projects">
+      <div class="square"></div>
+      <div class="title">
+        <h3>Featured </h3>
+        <h3>Projects</h3>
+      </div>
+      <div class="captions carousel slide" id="captions" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="carousel-caption">
+              <h1>Grande Villa </h1>
+              <h1>Large Space</h1><span>Cornell</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p><a href="#">Read more</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h1>Living Room </h1>
+              <h1>Simple Design</h1><span>Tonia</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p><a href="#">Read more</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-caption">
+              <h1>La Casa </h1>
+              <h1>Private Flat</h1><span>Cornell</span>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p><a href="#">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="carousel slide" id="projects" data-ride="carousel" data-interval="false">
+          <div class="indicate">
+              <a class="carousel-control-prev" href="#projects" role="button" data-slide="prev">&lt;</a>
+              <span> <b>/</b>3</span>
+              <ol class="carousel-indicators">
+                <li class="active" data-target="#projects" data-slide-to="0">1</li>
+                <li data-target="#projects" data-slide-to="1">2</li>
+                <li data-target="#projects" data-slide-to="2">3</li>
+              </ol>
+              <a class="carousel-control-prev" href="#projects" role="button" data-slide="next">&gt;  </a>
+            </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/2287310/pexels-photo-2287310.jpeg?cs=srgb&amp;dl=architectural-design-architecture-country-home-2287310.jpg&amp;fm=jpg" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/584399/living-room-couch-interior-room-584399.jpeg?cs=srgb&amp;dl=airbnb-apartment-appartment-584399.jpg&amp;fm=jpg" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://images.pexels.com/photos/1115804/pexels-photo-1115804.jpeg?cs=srgb&amp;dl=apartment-architectural-design-architecture-1115804.jpg&amp;fm=jpg" alt="...">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Start News-->
+    <div class="news">
+      <div class="title">
+        <h3>Our </h3>
+        <h3>news</h3>
+      </div>
+      <div class="list row">
+        <div class="col-lg-4 col-12">
+          <h1>Paolo Simone at Cornell</h1><span>Fransisco, 11 April 2019</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.</p><span><a href="#">Read more</a></span>
+        </div>
+        <div class="col-lg-4 col-12">
+          <h1>Object to Project Exhibiton in Egypt</h1><span>Fransisco,  9 April 2019</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor  in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><span><a href="#">Read more</a></span>
+        </div>
+        <div class="col-lg-4 col-12">
+          <h1>Paolo Simone at Vatican City</h1><span>Fransisco, 28 March 2019</span>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p><span><a href="#">Read more</a></span>
+        </div>
+      </div>
+      <div class="sample">
+        <div class="square"></div>
+        <div class="img"> <img src="https://images.pexels.com/photos/2263510/pexels-photo-2263510.jpeg?cs=srgb&amp;dl=chairs-contemporary-cozy-2263510.jpg&amp;fm=jpg"></div>
+      </div>
+    </div>
+    <!-- Start About-->
+    <div class="about">
+      <div class="img"><img class="d-block w-100" src="https://images.pexels.com/photos/534172/pexels-photo-534172.jpeg?cs=srgb&amp;dl=apartment-chairs-clean-534172.jpg&amp;fm=jpg" alt="..."></div>
+      <div class="title">
+        <h3>About </h3>
+        <h3>Us</h3>
+      </div>
+      <div class="desc">
+        <h1>Luxury Furniture Retail Network</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p><a>Read More</a>
+      </div>
+    </div>
+    <!-- Start Contact-->
+    <div class="contact"><span>Follow us</span>
+      <div class="social"><i class="fa fa-facebook"></i><i class="fa fa-instagram"> </i><i class="fa fa-google-plus"></i></div>
+      <div class="info"><span>3127  Doctors Drive</span><span>Los Angeles</span><span>California</span><span>+1-202-555-0186</span><span>+1-202-555-0111</span><span>info@paolosimone.com</span></div>
+      <div class="cc">Terms. © 2019 Simone USA   </div>
+    </div>
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" defer="defer"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" defer="defer"></script>
+    <!-- Jquery scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- custum scripts -->
+    <script src="javascripts/main.js" type="text/javascript"></script>
+    <!-- custum scripts -->
+    <script src="javascripts/main.js" type="text/javascript"></script>
+  </body>
+</html>
